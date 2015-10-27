@@ -35,11 +35,6 @@ public class TestApplication extends Application<TestConfiguration> {
 		final RestoDAO dao = new RestoDAO(hibernate.getSessionFactory());
 		// Initialize the resource including the newly created dao:
 		final TestResource resource = new TestResource(dao);
-
-		/*    	final testHealthCheck healthCheck =
-    	        new testHealthCheck(configuration.getTemplate());
-    	environment.healthChecks().register("template", healthCheck);*/
-
 		// Register the resource to Jersey:
 		environment.jersey().register(resource);
 	}
