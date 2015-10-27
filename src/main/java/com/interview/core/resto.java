@@ -21,7 +21,7 @@ import javax.persistence.Table;
                 query = "DELETE FROM resto s WHERE s.id = :id"
         )        
 })
-public class resto {
+public class Resto {
     @Id
     @Column(name = "id", nullable = false)
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,10 +31,10 @@ public class resto {
     @Column(name = "name", nullable = false)
     private String name;
 
-    public resto() {
+    public Resto() {
     }
 
-    public resto(String name) {
+    public Resto(String name) {
         this.name = name;
     }
 

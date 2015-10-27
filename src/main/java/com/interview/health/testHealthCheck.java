@@ -2,10 +2,10 @@ package com.interview.health;
 
 import com.codahale.metrics.health.HealthCheck;
 
-public class testHealthCheck extends HealthCheck {
+public class TestHealthCheck extends HealthCheck {
     private final String template;
 
-    public testHealthCheck(String template) {
+    public TestHealthCheck(String template) {
         this.template = template;
     }
 

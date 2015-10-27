@@ -1,8 +1,8 @@
 package com.interview.resources;
 
 import com.codahale.metrics.annotation.Timed;
-import com.interview.core.resto;
-import com.interview.db.restoDAO;
+import com.interview.core.Resto;
+import com.interview.db.RestoDAO;
 
 import io.dropwizard.hibernate.UnitOfWork;
 
@@ -28,11 +28,11 @@ import java.util.Random;
  * relative to the class URI. 
  */
 
-public class testResource {
+public class TestResource {
     private Random randomIndex;
-    private final restoDAO restodao;
+    private final RestoDAO restodao;
     
-    public testResource(restoDAO restodao) {
+    public TestResource(RestoDAO restodao) {
         this.restodao = restodao;
     }
     
@@ -48,7 +48,7 @@ public class testResource {
     @POST
     @Timed
     @UnitOfWork(transactional = false)    
-    public resto createResto(resto restaurant) {
+    public Resto createResto(Resto restaurant) {
         return restodao.create(restaurant);
     }
     
@@ -82,8 +82,8 @@ public class testResource {
     @Path("/random")
     @UnitOfWork(transactional = false)
     @Timed   
-    public resto randomResto() {
-    	List<resto> list = restodao.findAll();
+    public Resto randomResto() {
+    	List<Resto> list = restodao.findAll();
         randomIndex = new Random();
         int index = randomIndex.nextInt(list.size());
         return list.get(index);
@@ -98,7 +98,7 @@ public class testResource {
     @GET
     @Timed
     @UnitOfWork(transactional = false)
-    public List<resto> getListResto() {
+    public List<Resto> getListResto() {
     	return restodao.findAll();
     }    
 }

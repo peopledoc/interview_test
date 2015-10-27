@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-public class testConfiguration extends Configuration {
+public class TestConfiguration extends Configuration {
     @NotEmpty
     private String template;
 
