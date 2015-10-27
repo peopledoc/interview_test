@@ -9,7 +9,7 @@ database:
   user: postgres
 
   # the password
-  password: papingo
+  password: MOTDEPASSE
 
   # the JDBC URL
   url: jdbc:postgresql://localhost:5432/restaurants

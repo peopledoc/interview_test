@@ -3,6 +3,11 @@ package com.interview.core;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
 
+/*
+ * Definition of the restaurants object, getters and
+ * setters.
+ */
+
 public class restaurants {
     private int id;
 

@@ -9,6 +9,16 @@ import org.hibernate.SessionFactory;
 
 import java.util.List;
 
+/*
+ * The data access object (DAO) for the restaurant
+ * object. The POJO is defined in the class 
+ * com.interview.core.restaurants, and the entity 
+ * is defined in com.interview.core.resto. Each
+ * method defines the action to take in the database,
+ * and most of the basic functionalities are 
+ * provided by hibernate.
+ */
+
 public class restoDAO extends AbstractDAO<resto> {
     public restoDAO(SessionFactory factory) {
         super(factory);

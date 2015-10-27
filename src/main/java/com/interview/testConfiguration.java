@@ -38,6 +38,14 @@ public class testConfiguration extends Configuration {
         this.defaultName = name;
     }
     
+    /*
+     * This next lines are needed for dropwizard to recognize
+     * the database keyword in the YAML configuration file. 
+     * It is in the YAML configuration file that all the 
+     * JDBC parameters (host, username, database name, etc) 
+     * are located.
+     */
+        
     @Valid
     @NotNull
     private DataSourceFactory database = new DataSourceFactory();
