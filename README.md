@@ -1,22 +1,8 @@
 interview_test
 ==============
-Ce test consiste à réaliser une petite web app. Les frameworks sont libres, la seul contrainte est que ce soit développé en Java.
-
+Ce test consiste à réaliser une petite web app autour d'un api Rest. 
 Le rôle de l'application est de choisir aléatoirement un restaurant où manger le midi parmi une liste.
    
-   
-Niveau 1
---------
-Web service ReST
-
-    GET /restaurants
-Une liste de noms de restaurants est passée en GET.
-Cette méthode retourne de manière aléatoire l'un des restaurants de la liste.
-
-
-Niveau 2
---------
-Web service ReST
 
     POST /restaurants
     {'restaurant': 'resto1'}
